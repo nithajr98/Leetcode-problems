@@ -16,18 +16,17 @@ class Solution {
         
         
 
-        res.get(0).add(1);
-        for(int i=1;i<numRows;i++){
+        
+        for(int i=0;i<numRows;i++){
             ArrayList<Integer> row = new ArrayList<Integer>();
-            int j=0;
-            for(;j<=i;j++){
-                if(j==i||j==0){
+            for(int j=0;j<=i;j++){
+                if(j==0||j==i){
                     row.add(1);
-                }else{
-                    row.add(j,res.get(i-1).get(j) + res.get(i-1).get(j+1));
+                } else{
+                    row.add(res.get(i-1).get(j-1)+res.get(i-1).get(j));
                 }
-
             }
+            
             res.add(row);
         }
 
