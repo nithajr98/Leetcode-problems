@@ -7,18 +7,31 @@
 // @lc code=start
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
-        int[] presum = new int[nums.length];
-        
-        double max;
-        double curmax=0;int j=0;
+               
+        double curmax=Integer.MIN_VALUE;
 
-        int start=0,end=0;
-        presum[0]=nums[0];
-        for(int i=1;i<nums.length;i++){
+        int start=0,end=k-1;
+        double sum=0;
+        for(int i=start;i<=end;i++){
+            sum+=nums[i];
+        }
+        while(end<nums.length){
+
+            if(sum>curmax){
+                curmax =sum;
+            }
+            sum-=nums[start];
+            start++;
+            end++;
+            if(end<nums.length){
+                sum+=nums[end];
+            }
+            
             
         }
-        return max;
+        return curmax/k;
     }
+    
 }
 // @lc code=end
 
