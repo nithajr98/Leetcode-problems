@@ -10,7 +10,9 @@ import java.util.Hashtable;
 // @lc code=start
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-
+        int[] c= new int[2];
+        c[0]=1;
+        
         HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
         for(int i=0;i<nums.length;i++){
             Integer diff = target-nums[i];

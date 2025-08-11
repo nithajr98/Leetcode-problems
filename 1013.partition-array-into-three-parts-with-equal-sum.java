@@ -9,10 +9,7 @@ import java.util.Arrays;
 // @lc code=start
 class Solution {
     public boolean canThreePartsEqualSum(int[] arr) {
-        int sum = 0;
-        for(int i : arr) {
-            sum += i;
-        }
+        int sum = Arrays.stream(arr).sum();
 
         if(sum%3!=0){
             return false;

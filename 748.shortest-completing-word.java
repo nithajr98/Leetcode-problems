@@ -5,10 +5,13 @@
  */
 
 // @lc code=start
-class MyHashSet {
 
+import java.util.HashMap;
+
+class MyHashSet {
+    HashMap<String,Integer> set;
     public MyHashSet() {
-        
+        set = new HashMap<>();
     }
     
     public void add(int key) {
@@ -20,7 +23,7 @@ class MyHashSet {
     }
     
     public boolean contains(int key) {
-        
+        return true;
     }
 }
 
